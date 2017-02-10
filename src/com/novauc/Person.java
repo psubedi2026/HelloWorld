@@ -1,38 +1,49 @@
-package com.novauc;
-
 /**
- * Created by psubedi2020 on 2/7/17.
+ * Created by psubedi2020 on 2/2/17.
  */
 public class Person {
-    String name;
-    int age;
-    boolean isAlive;
 
-    String getName() {
-        return name;
+    String name;
+    int    age;
+    boolean isAlive;
+    public static String COLOR = "Green";
+
+    public  static String getColor() {
+        return Person.COLOR;
     }
 
-    void setName(String name) {
+    public void setColor(String color) {
+        this.COLOR = "Yellow";
+    }
+
+    public Person() {
+
+    }
+
+    public Person(String name, int age, boolean isAlive) {
+        this.name = name;
+        this.age = age;
+        this.isAlive = isAlive;
+    }
+
+    public Person(String name)  {
         this.name = name;
     }
 
-
-    int getAge() {
-       return age;
+    public String getName() {
+        return name;
     }
 
-    void setAge(int age) {
-
-        if (age > 0  && age < 151 ) {
-            this.age = age;
-        }
-        else {
-        System.out.println("Not a valid age");
-        }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    boolean getIsAlive() {
-        return isAlive;
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public boolean isAlive() {
@@ -42,9 +53,4 @@ public class Person {
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
-
-    void setIsAlive(boolean isAlive) {
-        this.isAlive = isAlive;
-    }
-
 }
